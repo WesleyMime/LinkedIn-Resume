@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'roboto';
+    font-weight: normal;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'roboto';
+    font-weight: 300;
+    src: url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: 'roboto';
+    font-weight: 500;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    src: url(fonts/fontawesome-webfont.ttf);
+}
+
+@page {
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+
+#linkedin {
+    font-family: 'roboto', sans-serif;
+    background-color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #535252;
+    letter-spacing: 0.072em;
+    font-weight: normal;
+}
+#linkedin h1,
+#linkedin h3,
+#linkedin h5,
+#linkedin h6 {
+    font-weight: 400;
+    margin: 0;
+}
+#linkedin .c {
+    clear: both;
+}
+#linkedin li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-top: 9px;
+}
+#linkedin ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#linkedin p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-size: 10pt;
+    line-height: 17pt;
+}
+#linkedin .m_box {
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+}
+#linkedin .fa {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 26px;
+}
+#linkedin h2 {
+    font-weight: 400;
+    font-weight: 500;
+    margin: 0;
+    font-size: 22pt;
+    line-height: 37pt;
+}
+#linkedin h4 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 12pt;
+    line-height: 20pt;
+    /* opacity: 1; */
+}
+#linkedin strong {
+    font-weight: 400;
+    font-weight: 500;
+}
+#linkedin .rightCol {
+    width: 63.5%;
+    height: 100%;
+    float: right;
+    display: block;
+    /* flex-direction: column; */
+}
+#linkedin .rightCol .block {
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+    width: 100%;
+    min-height: 50px;
+    /* flex: 1; */
+    position: relative;
+    background-color: white;
+    padding-top: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#linkedin .rightCol .block .icon {
+    width: 16%;
+    float: left;
+    margin-left: 0;
+}
+#linkedin .rightCol .block .icon .fa {
+    text-align: center;
+    display: block;
+    font-size: 30pt;
+}
+#linkedin .rightCol .block .content {
+    width: 80%;
+    position: relative;
+    height: 96%;
+    left: 3%;
+    padding-right: 0%;
+    text-align: left;
+    display: block;
+    /* display: flex;
+    flex-direction: column; */
+}
+#linkedin .rightCol .block .content .item {
+    border-bottom: 1px solid #bdbdbd;
+    /* flex: 1; */
+    width: 112%;
+    display: block;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    text-align: left;
+}
+#linkedin .rightCol .block .content .item span {
+    margin-top: 0;
+    font-size: 10pt;
+    line-height: 16pt;
+}
+#linkedin .rightCol .block .content .item p {
+    margin-top: 5px;
+}
+#linkedin .rightCol .block .content .item:last-child {
+    border-bottom-style: none;
+}
+#linkedin .leftCol {
+    width: 35%;
+    height: auto;
+    min-height: 297mm;
+    float: left;
+    padding: 0;
+    text-align: left;
+    color: #ffffff;
+    background-color: #293e49;
+    overflow: hidden;
+    display: block;
+}
+#linkedin .leftCol a {
+    color: white;
+    text-decoration: none;
+}
+#linkedin .leftCol .heading {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+#linkedin .leftCol .title {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+#linkedin .leftCol .title span {
+    margin-top: -5px;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+    line-height: 19pt;
+}
+#linkedin .leftCol .item {
+    width: 100%;
+    margin-top: 13px;
+    float: left;
+}
+#linkedin .leftCol .item .icon {
+    width: 20%;
+    margin-top: 8px;
+    float: left;
+}
+#linkedin .leftCol .item .fa {
+    display: inherit;
+    text-align: center;
+}
+#linkedin .leftCol .item .text {
+    float: right;
+    width: 80%;
+    padding-right: 10%;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #4783c2;
+}
+#linkedin .leftCol .item .text li {
+    padding-top: 0;
+}
+#linkedin .leftCol .item span {
+    font-weight: 300;
+}
+#linkedin .leftCol .item .skill {
+    clear: both;
+    width: 90%;
+    margin-left: 1%;
+    padding-top: 4px;
+}
+#linkedin .leftCol .item .skill .left {
+    float: left;
+    width: 10%;
+    padding-top: 3px;
+}
+#linkedin .leftCol .item .skill .left i:nth-child(2) {
+    float: left;
+    padding-top: 4px;
+}
+#linkedin .leftCol .item .skill .right {
+    float: right;
+    width: 90%;
+}
+#linkedin .leftCol .item .skill .right .progress {
+    float: left;
+    position: relative;
+    height: 2px;
+    display: block;
+    width: 95%;
+    background-color: #4783c2;
+    border-radius: 2px;
+    /* margin: 0.5rem 0 1rem; */
+    overflow: visible;
+}
+#linkedin .leftCol .item .skill .right .progress .determinate {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 2px;
+}
+#linkedin .leftCol .item .skill .right .progress .determinate .fa {
+    font-size: 12px;
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    margin-left: 50%;
+}
+#linkedin .leftCol .item.last .text {
+    border-bottom-style: none;
+    padding-bottom: 0;
+}
+#linkedin #githubIcon {
+    width: 25px;
+    padding-left: 17px;
+}
+
+.fa-user:before {
+    content: "\f007";
+}
+.fa-location-arrow:before {
+    content: "\f124";
+}
+.fa-phone:before {
+    content: "\f095";
+}
+.fa-envelope:before {
+    content: "\f0e0";
+}
+.fa-github:before {
+    content: "\f09b";
+}
+.fa-gears:before, .fa-cogs:before {
+    content: "\f085";
+}
+.fa-circle:before {
+    content: "\f111";
+}
+.fa-suitcase:before {
+    content: "\f0f2";
+}
+.fa-mortar-board:before, .fa-graduation-cap:before {
+    content: "\f19d";
+}

@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title th:text="${person.name.first} + ' ' + ${person.name.last}"></title>
+    <link rel="stylesheet" href="linkedin.css"/>
+</head>
+<body>
+
+<div class="resume" id="linkedin">
+  <div class="leftCol m_box">
+      <div class="item">
+          <div style="width: 100%; height: 15px;"></div>
+          <div class="text">
+              <h1>
+                  <span th:text="${person.name.first}"></span>
+                  <span th:text="${person.name.last}"></span>
+              </h1>
+
+                  <div style="width: 100%; height: 10px;"></div>
+                  <h3 th:text="${person.position}"></h3>
+                  <div style="width: 100%; height: 10px;"></div>
+              <ul>
+                  <li>
+                      <span th:text="${person.contact.street}"></span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="item">
+          <div class="text">
+              <a th:href="'mailto:' + ${person.contact.email}">
+                  <span th:text="${person.contact.email}"></span>
+              </a>
+          </div>
+      </div>
+
+      <div class="item">
+          <div class="text">
+              <a th:href="'https://' + ${person.contact.website}" target="_blank">
+                  <span th:text="${person.contact.website}"></span>
+              </a>
+          </div>
+      </div>
+
+      <div class="item">
+          <div class="text">
+              <a th:href="'https://github.com/' + ${person.contact.github}" target="_blank">
+                  <span th:text="'https://github.com/' + ${person.contact.github}"></span>
+              </a>
+          </div>
+      </div>
+
+      <div class="item last">
+          <div class="text">
+              <div style="width: 100%; height: 15px;"></div>
+              <h3 th:text="${lang.headings.languages}"></h3>
+          </div>
+          <div class="skill"  th:each="language : ${person.languages}">
+              <div class="right">
+                  <span th:text="'• ' + ${language.name + ' ('  + language.level} + ')'"></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="item last">
+          <div class="text">
+              <div style="width: 100%; height: 15px;"></div>
+              <h3 th:text="${lang.headings.skills}"></h3>
+          </div>
+          <div class="skill"  th:each="skill : ${person.skills}">
+              <div class="right">
+                  <span th:text="'• ' + ${skill.name}"></span>
+              </div>
+          </div>
+      </div>
+
+      <div class="item last">
+          <div class="text">
+              <div style="width: 100%; height: 15px;"></div>
+              <h3 th:text="${lang.headings.certificates}"></h3>
+          </div>
+          <div class="skill"  th:each="certificate : ${person.certificates}">
+              <div class="right">
+                  <u>
+                      <a th:href="${certificate.link}" target="_blank">
+                          <span th:text="'• ' + ${certificate.name}"></span>
+                      </a>
+                  </u>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="rightCol">
+
+      <div class="block">
+          <div class="content">
+              <div style="width: 100%; height: 12px;"></div>
+              <h2 th:text="${lang.headings.objective}"></h2>
+              <div class="item">
+                  <span th:text="${person.objective}"></span>
+              </div>
+          </div>
+      </div>
+
+      <div th:if="${not #lists.isEmpty(person.experience)}" class="block">
+          <div class="content">
+              <h2 th:text="${lang.headings.experience}"></h2>
+                  <div class="item" th:each="experience : ${person.experience}">
+                      <h3><span th:text="${experience.company}"/></h3>
+                      <span><strong th:text="${experience.position}"/></span><p/>
+                      <span th:text="${experience.timeperiod}"></span>
+                      <p th:text="${experience.description}"></p>
+                  </div>
+          </div>
+      </div>
+
+      <div th:if="${not #lists.isEmpty(person.project)}" class="block">
+          <div class="content">
+              <h2 th:text="${lang.headings.project}"></h2>
+              <div class="item" th:each="project : ${person.project}">
+                  <h3><span th:text="${project.name}"/></h3>
+                  <span><strong th:text="${project.technologies}"/></span><p/>
+                  <span th:text="${project.link}"></span>
+                  <p th:text="${project.description}"></p>
+              </div>
+          </div>
+      </div>
+
+      <div th:if="${not #lists.isEmpty(person.education)}" class="block">
+          <div class="content">
+              <h2 th:text="${lang.headings.education}"></h2>
+
+                  <div class="item" th:each="education : ${person.education}">
+                      <h3 th:text="${education.degree}"></h3>
+                      <span th:text="${education.timeperiod}"></span>
+                      <p th:text="${education.description}"></p>
+                  </div>
+          </div>
+      </div>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+
+
+</body>
+</html>

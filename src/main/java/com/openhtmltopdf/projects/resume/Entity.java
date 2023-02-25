@@ -23,16 +23,33 @@ public class Entity {
     @JsonProperty public String timeperiod;
     @JsonProperty public String description;
   }
+
+  public static class Project {
+    @JsonProperty public String name;
+    @JsonProperty public String technologies;
+    @JsonProperty public String description;
+    @JsonProperty public String link;
+  }
   
   public static class Education {
     @JsonProperty public String degree;
     @JsonProperty public String timeperiod;
     @JsonProperty public String description;
   }
+
+  public static class Language {
+    @JsonProperty public String name;
+    @JsonProperty public String level;
+  }
   
   public static class Skill {
     @JsonProperty public String name;
     @JsonProperty public int level;
+  }
+
+  public static class Certificate {
+    @JsonProperty public String name;
+    @JsonProperty public String link;
   }
   
   public static class Contact {
@@ -55,6 +72,9 @@ public class Entity {
   public static class ResumeEntity {
     @JsonProperty
     public Name name;
+
+    @JsonProperty
+    public String objective;
     
     @JsonProperty
     public String position;
@@ -65,14 +85,26 @@ public class Entity {
     @JsonProperty
     @JsonDeserialize(as=ArrayList.class, contentAs=Experience.class)
     public List<Experience> experience;
+
+    @JsonProperty
+    @JsonDeserialize(as=ArrayList.class, contentAs=Project.class)
+    public List<Project> project;
     
     @JsonProperty
     @JsonDeserialize(as=ArrayList.class, contentAs=Education.class)
     public List<Education> education;
+
+    @JsonProperty
+    @JsonDeserialize(as=ArrayList.class, contentAs=Language.class)
+    public List<Language> languages;
     
     @JsonProperty
     @JsonDeserialize(as=ArrayList.class, contentAs=Skill.class)
     public List<Skill> skills;
+
+    @JsonProperty
+    @JsonDeserialize(as=ArrayList.class, contentAs=Certificate.class)
+    public List<Certificate> certificates;
     
     @JsonProperty
     public String skillDescription;
@@ -84,15 +116,27 @@ public class Entity {
   public static class Headings {
     @JsonProperty
     public String contact;
+
+    @JsonProperty
+    public String objective;
     
     @JsonProperty
     public String experience;
+
+    @JsonProperty
+    public String project;
     
     @JsonProperty
     public String education;
+
+    @JsonProperty
+    public String languages;
     
     @JsonProperty
     public String skills;
+
+    @JsonProperty
+    public String certificates;
   }
   
   public static class LangEntity {

@@ -1,8 +1,12 @@
 {
  headings: {
   contact: 'Contact',
+  objective: 'Objective',
   experience: 'Experience',
+  project: 'Projects',
   education: 'Education',
-  skills: 'Skills'
+  languages: 'Languages',
+  skills: 'Skills',
+  certificates: 'Certificates'
  }
 }

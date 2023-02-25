@@ -5,6 +5,7 @@
     last: 'Doe',
   },
   position: 'Software Developer',
+  objective: 'Be a Software Developer',
   birth: {
     year: 1990,
     location: 'New York'
@@ -28,6 +29,19 @@
       description: 'Making coffee and baking cookies.'
     }
   ],
+  project: [{
+      name: 'Project A',
+      technologies: 'Java, Spring, MySQL',
+      description: 'A Project description',
+      link: 'https://github.com'
+    },
+    {
+      name: 'Project B',
+      technologies: 'Html, CSS, JavaScript',
+      description: 'B Project description',
+      link: 'https://github.com'
+    }
+  ],
   education: [{
       degree: 'Master of Arts',
       timeperiod: 'March 2012 - December 2013',
@@ -38,6 +52,15 @@
       timeperiod: 'March 2009 - December 2011',
       description: 'Major in Engineering, University B, Los Angeles, USA.'
     }
+  ],
+  languages: [{
+   name: 'Portuguese',
+   level: 'Native'
+  },
+   {
+     name: 'English',
+     level: 'Advanced'
+   }
   ],
   // skill level goes 0 to 100
   skills: [{
@@ -73,7 +96,39 @@
       level: 99
     }
   ],
-  skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
+  certificates: [{
+   name: 'HTML5',
+   link: "https://www.freecodecamp.org/"
+  },
+   {
+     name: 'CSS3',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'JavaScript',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'Node.js',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'Angular 2',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'TypeScript',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'ES.Next',
+     link: "https://www.freecodecamp.org/"
+   },
+   {
+     name: 'Docker',
+     link: "https://www.freecodecamp.org/"
+   }
+  ],
   contact: {
     email: 'john.doe@email.com',
     phone: '0123 456789',

@@ -13,8 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.stream.Stream;
@@ -47,7 +46,8 @@ public class Generator {
   private static enum Languages {
     ENGLISH("en"),
     GERMAN("de"),
-    FRENCH("fr");
+    FRENCH("fr"),
+    PORTUGUESE("pt-br");
     
     public final String slug;
     
@@ -57,7 +57,8 @@ public class Generator {
   }
   
   private static enum Template {
-    MATERIAL_BLUE("material-blue");
+    MATERIAL_BLUE("material-blue"),
+    LINKEDIN("linkedin");
     
     public final String slug;
     
