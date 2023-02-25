@@ -20,6 +20,14 @@ prettyResumeApp.controller('PrettyResumeController', function PrettyResumeContro
   $scope.removeExperience = function(idx) {
     $scope.person.experience.splice(idx, 1);
   };
+
+  $scope.addProject = function() {
+    $scope.person.project.push({ name: '', technologies: '', description: '', link: ''});
+  };
+
+  $scope.removeProject = function(idx) {
+    $scope.person.project.splice(idx, 1);
+  };
   
   $scope.addEducation = function() {
     $scope.person.education.push({ degree: '', timeperiod: '', description: ''});
@@ -28,6 +36,14 @@ prettyResumeApp.controller('PrettyResumeController', function PrettyResumeContro
   $scope.removeEducation = function(idx) {
     $scope.person.education.splice(idx, 1);
   };
+
+  $scope.addLanguage = function() {
+    $scope.person.languages.push({ name: '', level: 0 });
+  };
+
+  $scope.removeLanguage = function(idx) {
+    $scope.person.languages.splice(idx, 1);
+  };
   
   $scope.addSkill = function() {
     $scope.person.skills.push({ name: '', level: 0 });
@@ -35,6 +51,14 @@ prettyResumeApp.controller('PrettyResumeController', function PrettyResumeContro
   
   $scope.removeSkill = function(idx) {
     $scope.person.skills.splice(idx, 1);
+  };
+
+  $scope.addCertificate = function() {
+    $scope.person.certificates.push({ name: '', level: 0 });
+  };
+
+  $scope.removeCertificate = function(idx) {
+    $scope.person.certificates.splice(idx, 1);
   };
   
   $scope.getReady = function() {
@@ -94,6 +118,9 @@ label {
  
    <label for="last-name">Last Name</label>
    <input id="last-name" type="text" placeholder="Last Name" ng-model="person.name.last"/>
+
+  <label for="objective">Objective</label>
+  <input id="objective" type="text" placeholder="Objective" ng-model="person.objective"/>
 
    <label for="position">Position</label>
    <input id="position" type="text" placeholder="Position" ng-model="person.position"/>
@@ -160,6 +187,36 @@ label {
  </div>
 
  <div class="my-card">
+     <div class="my-card-header"><h2>Projects</h2></div>
+
+     <div class="my-card-content">
+         <div class="row" ng-repeat="ex in person.project">
+             <div class="col-md-2">
+                 <input type="text" placeholder="Name" ng-model="ex.name"/>
+             </div>
+
+             <div class="col-md-2">
+                 <input type="text" placeholder="Technologies" ng-model="ex.technologies"/>
+             </div>
+
+             <div class="col-md-3">
+                 <input type="text" placeholder="Description" ng-model="ex.description"/>
+             </div>
+
+             <div class="col-md-3">
+                 <input type="text" placeholder="Link" ng-model="ex.link"/>
+             </div>
+
+             <div class="col-md-2">
+                 <button type="button" class="btn btn-danger" ng-click="removeProject($index)">X</button>
+             </div>
+         </div>
+         <button type="button" class="btn btn-primary" ng-click="addProject()">Add</button>
+     </div>
+
+ </div>
+
+ <div class="my-card">
   <div class="my-card-header"><h2>Education</h2></div>
  
   <div class="my-card-content">
@@ -185,6 +242,27 @@ label {
    
  </div>
 
+ <div class="my-card">
+     <div class="my-card-header"><h2>Languages</h2></div>
+
+     <div class="my-card-content">
+         <div class="row" ng-repeat="sk in person.languages">
+             <div class="col-md-6">
+                 <input type="text" placeholder="Language Name" ng-model="sk.name"/>
+             </div>
+
+             <div class="col-md-4">
+                 <input type="text" placeholder="Native" ng-model="sk.level"/>
+             </div>
+
+             <div class="col-md-2">
+                 <button type="button" class="btn btn-danger" ng-click="removeLanguage($index)">X</button>
+             </div>
+         </div>
+         <button type="button" class="btn btn-primary" ng-click="addLanguage()">Add</button><br/>
+     </div>
+ </div>
+
 
  <div class="my-card">
   <div class="my-card-header"><h2>Skills</h2></div>
@@ -204,12 +282,29 @@ label {
      </div>
    </div>
    <button type="button" class="btn btn-primary" ng-click="addSkill()">Add</button><br/>
-   
-   <label for="skill-description">Extra Skills Description</label>
-   <input id="skill-description" type="text" placeholder="Extra Skills Description" ng-model="person.skillDescription"/>
-  </div>  
-   
+  </div>
  </div>
+
+ <div class="my-card">
+  <div class="my-card-header"><h2>Certificates</h2></div>
+
+    <div class="my-card-content">
+      <div class="row" ng-repeat="sk in person.certificates">
+        <div class="col-md-6">
+          <input type="text" placeholder="Certificate Name" ng-model="sk.name"/>
+         </div>
+
+        <div class="col-md-4">
+            <input type="text" placeholder="Link" ng-model="sk.link"/>
+        </div>
+
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger" ng-click="removeCertificate($index)">X</button>
+        </div>
+      </div>
+        <button type="button" class="btn btn-primary" ng-click="addCertificate()">Add</button><br/>
+    </div>
+  </div>
 
  <div class="my-card">
   <div class="my-card-header"><h2>Generate PDF Resume</h2></div>

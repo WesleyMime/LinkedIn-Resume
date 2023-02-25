@@ -1,0 +1,12 @@
+{
+ headings: {
+  contact: 'Contato',
+  objective: 'Objetivo',
+  experience: 'Experiência',
+  project: 'Projetos',
+  education: 'Educação',
+  languages: 'Línguas',
+  skills: 'Habilidades',
+  certificates: 'Certificados'
+ }
+}
